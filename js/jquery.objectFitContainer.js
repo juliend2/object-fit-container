@@ -1,18 +1,20 @@
 (function ( $ ) {
 
   $.fn.objectFitContainer = function() {
-    var naturalWidth = this[0].naturalWidth;
-    var naturalHeight = this[0].naturalHeight;
-    var elementHeight = this.height();
-    var desiredElementWidth = (elementHeight * naturalWidth) / naturalHeight;
-    console.log('naturalWidth',
-               naturalWidth,
-               'naturalHeight',
-               naturalHeight,
-               'elementHeight',
-               elementHeight);
-    this.width(desiredElementWidth);
-    return this;
+    return this.each(function(i, element) {
+      var naturalWidth = element.naturalWidth;
+      var naturalHeight = element.naturalHeight;
+      var elementHeight = $(element).height();
+      var desiredElementWidth = (elementHeight * naturalWidth) / naturalHeight;
+      // console.log('naturalWidth',
+      //            naturalWidth,
+      //            'naturalHeight',
+      //            naturalHeight,
+      //            'elementHeight',
+      //            elementHeight);
+      $(element).width(desiredElementWidth);
+      return element;
+    });
   };
 
 }( jQuery ));

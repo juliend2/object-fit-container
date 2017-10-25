@@ -7,16 +7,19 @@
 body {
   background: gray;
 }
-.wrapper {
-  height: 500px;
+.horizontal-wrapper, .vertical-wrapper {
+  height: 300px;
   outline: 1px solid red;
   background: red;
   display: block;
   text-align: center;
 }
+.vertical-wrapper {
+  background: orange;
+}
 img.object-fit-container {
   width: 100%;
-  height: 30%;
+  height: 50%;
   object-fit: contain;
   outline: 1px solid yellow;
 }
@@ -24,8 +27,12 @@ img.object-fit-container {
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <div class="wrapper">
+  <div class="horizontal-wrapper">
     <img src="img/flowers-03.jpg" class="object-fit-container" />
+  </div>
+
+  <div class="vertical-wrapper">
+    <img src="img/rainforest.jpg" class="object-fit-container" />
   </div>
 
   <script src="http://code.jquery.com/jquery-latest.js"></script>
