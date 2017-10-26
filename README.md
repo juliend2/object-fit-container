@@ -2,10 +2,18 @@
 
 ## Usage
 
-### 1. Install it:
+### 0. Install it:
 
-```html
-<script src="js/jquery.objectFitContainer.js"></script>
+```
+npm install --save object-fit-container
+```
+
+### 1. require it:
+
+```javascript
+var objectFitContainer = require('object-fit-container');
+// ...
+objectFitContainer($('.some-image'));
 ```
 
 ### 2. In HTML:
@@ -27,10 +35,4 @@
   height: 50%;
   object-fit: contain; // for browsers that support it
 }
-```
-
-### 4. In JavaScript:
-
-```javascript
-$('.some-image').objectFitContainer();
 ```
